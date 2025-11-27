@@ -8,100 +8,97 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">Abel<span>Ochieng</span></a>
-            <ul id="sidemenu">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="education-history.html">Education</a></li>
-                <li><a href="employment-history.html" class="active">Experience</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <i class="fas fa-times" onclick="closemenu()"></i>
+
+<nav>
+    <div class="nav-container">
+        <a href="index.html" class="logo">Abel<span>Ochieng</span></a>
+        <ul id="sidemenu">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="education-history.html">Education</a></li>
+            <li><a href="employment-history.html" class="active">Experience</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+    <h1><i class="fas fa-briefcase"></i> Employment History</h1>
+    <p>Professional experience and career journey</p>
+</section>
+
+<!-- Timeline Section -->
+<section class="timeline">
+    <div class="timeline-container">
+        
+        <!-- Production Lead -->
+        <div class="timeline-item">
+            <p class="timeline-date">Jun 2024 - Aug 2025</p>
+            <h3>Production Lead</h3>
+            <h4>Carne Food UK | London, UK</h4>
+            <ul>
+                <li>Streamlined production workflows, improving operational efficiency by 15% through process redesign</li>
+                <li>Ensuring 100% compliance with safety and quality regulations</li>
+                <li>Introduced a data-driven monitoring system, reducing errors by 20%</li>
+                <li>Applied problem-solving techniques to eliminate bottlenecks, reducing downtime by 10%</li>
             </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
-        </div>
-    </nav>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <h1><i class="fas fa-briefcase"></i> Employment History</h1>
-        <p>Professional experience and career journey</p>
-    </section>
-
-    <!-- Timeline Section -->
-    <section class="timeline">
-        <div class="timeline-container">
-            
-            <!-- Student Ambassador -->
-            <div class="timeline-item">
-                <p class="timeline-date">2022 - Present</p>
-                <h3>Student Ambassador</h3>
-                <h4>University of Hertfordshire, Hatfield, UK</h4>
-                <p>Representing the university at open days, recruitment events, and campus tours. Key responsibilities include:</p>
-                <ul>
-                    <li>Guiding prospective students and parents through campus facilities</li>
-                    <li>Sharing personal experiences of studying aerospace engineering</li>
-                    <li>Assisting at university recruitment events and applicant days</li>
-                    <li>Providing insights into student life and academic programmes</li>
-                    <li>Supporting international student orientation programmes</li>
-                </ul>
-            </div>
-
-            <!-- Academic Projects Role -->
-            <div class="timeline-item">
-                <p class="timeline-date">2023 - 2025</p>
-                <h3>Project Team Member - Aerospace Vehicle Design</h3>
-                <h4>University of Hertfordshire</h4>
-                <p>Contributing to group design projects for sustainable aircraft development:</p>
-                <ul>
-                    <li>Collaborated on VOLTURA V1150 regional aircraft design</li>
-                    <li>Contributed to technical drawings and CAD documentation</li>
-                    <li>Participated in performance analysis and optimization studies</li>
-                    <li>Engaged in design reviews and technical presentations</li>
-                </ul>
-            </div>
-
-            <!-- Research Assistant -->
-            <div class="timeline-item">
-                <p class="timeline-date">2024</p>
-                <h3>Laboratory Research Assistant</h3>
-                <h4>School of Physics, Engineering and Computer Science</h4>
-                <p>Supporting wind tunnel experiments and flight simulation activities:</p>
-                <ul>
-                    <li>Assisted in setting up AF1300 Subsonic Wind Tunnel experiments</li>
-                    <li>Collected and processed aerodynamic data from pressure tappings</li>
-                    <li>Operated X-Plane flight simulation for performance testing</li>
-                    <li>Maintained laboratory equipment and documentation</li>
-                </ul>
-            </div>
-
         </div>
 
-        <div class="container" style="text-align: center;">
-            <a href="index.html" class="back-link">
-                <i class="fas fa-arrow-left"></i> Back to Portfolio
-            </a>
+        <!-- Team Supervisor -->
+        <div class="timeline-item">
+            <p class="timeline-date">Nov 2021 - Aug 2023</p>
+            <h3>Team Supervisor</h3>
+            <h4>Gopuff | London, UK</h4>
+            <ul>
+                <li>Led a team of 9-14 staff, achieving and exceeding key performance indicators</li>
+                <li>Optimised shift schedules and resource allocation, increasing productivity by 80%</li>
+                <li>Resolved technical and system issues, ensuring operational continuity</li>
+                <li>Managed staff relations, addressing complaints and internal issues proactively</li>
+            </ul>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Abel Virtue Ochieng. All Rights Reserved.</p>
-            <p>BEng Aerospace Engineering with Pilot Studies | University of Hertfordshire</p>
+        <!-- Student Proctor -->
+        <div class="timeline-item">
+            <p class="timeline-date">Oct 2021 - May 2023</p>
+            <h3>Student Proctor</h3>
+            <h4>University of Hertfordshire | Hatfield, UK</h4>
+            <ul>
+                <li>Assisted in setting up lectures, exams, and lab sessions</li>
+                <li>Supported students with academic queries, referrals, and technical troubleshooting</li>
+                <li>Managed exam logistics using university systems and technology</li>
+            </ul>
         </div>
-    </footer>
 
-    <script>
-        var sidemenu = document.getElementById("sidemenu");
-        function openmenu() {
-            sidemenu.style.right = "0";
-        }
-        function closemenu() {
-            sidemenu.style.right = "-200px";
-        }
-    </script>
+    </div>
+    
+    <div class="container" style="text-align: center; margin-top: 3rem;">
+        <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>© 2025 Abel Virtue Ochieng. All Rights Reserved.</p>
+        <p>BEng Aerospace Engineering with Pilot Studies | University of Hertfordshire</p>
+    </div>
+</footer>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
 </body>
 </html>
