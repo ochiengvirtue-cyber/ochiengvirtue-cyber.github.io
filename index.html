@@ -4,216 +4,194 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abel Virtue Ochieng | Aerospace Engineer</title>
+    <title>Abel Virtue Ochieng | Aerospace Engineer & Pilot</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/ac51eb13ee.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+
+<!-- Header Section -->
 <div data-aos="fade-right" data-aos-duration="1400" id="header">
-<div class="container">
-<nav>
-    <div class="logo" data-aos="flip-down" data-aos-duration="1400">Virtue</div>
-    <ul id="sidemenu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <i class="fas fa-times"></i>
-    </ul>
-    <i class="fas fa-bars"></i>
-</nav>
-<div class="header-text"> 
-    <p data-aos="fade-right" data-aos-duration="1400">Future Aerospace Engineer </p>
-    <h1 data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">Hello, I'm <span>Abel Virtue</span><br>from London, UK</h1>
-</div>
-</div>
+    <div class="container">
+        <nav>
+            <div class="logo" data-aos="flip-down" data-aos-duration="1400">Abel<span>Ochieng</span></div>
+            <ul id="sidemenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="academic-projects.html">Projects</a></li>
+                <li><a href="education-history.html">Education</a></li>
+                <li><a href="employment-history.html">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text"> 
+            <p data-aos="fade-right" data-aos-duration="1400">Aerospace Engineer & Pilot</p>
+            <h1 data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">Hello, I'm <span>Abel Virtue Ochieng</span><br>from London, UK</h1>
+            <p data-aos="fade-right" data-aos-duration="1600">BEng Aerospace Engineering with Pilot Studies</p>
+        </div>
+    </div>
 </div>
 
-
-<!----------about----------->
+<!-- About Section -->
 <div id="about">
     <div class="container">
-<div class="row">
-    <div class="about-col-1">
-        <img src="IMG_2976.jpeg" data-aos="fade-right" data-aos-duration="1400" alt="Abel Virtue Ochieng">
-    </div>
-    <div class="about-col-2">
-        <h1 data-aos="fade-left" data-aos-duration="1400" class="sub-title">About Me</h1>
-        <p data-aos="fade-left" data-aos-duration="1400">An  ambitious  final-year  student  pursuing  a  degree  in  Aerospace  Engineering with Pilot Studies at the 
-            University of Hertfordshire, deeply passionate about Engineering and Aerodynamics. I am 
-            actively seeking a challenging role that will allow me to apply and expand my skills in engineering and technology. 
-            Throughout my academic and professional journey, I have acquired valuable skills, hand-on experience, and in-depth 
-            theoretical knowledge, and I'm eager to contribute these to a dynamic and innovative team.</p>
+        <div class="row">
+            <div class="about-col-1">
+                <img src="IMG_2976.jpeg" data-aos="fade-right" data-aos-duration="1400" alt="Abel Virtue Ochieng">
+            </div>
+            <div class="about-col-2">
+                <h1 data-aos="fade-left" data-aos-duration="1400" class="sub-title">About Me</h1>
+                <p data-aos="fade-left" data-aos-duration="1400">I am a final-year Aerospace Engineering student at the University of Hertfordshire with a specialisation in Pilot Studies. My academic journey has equipped me with comprehensive knowledge in aerodynamics, propulsion systems, flight testing, and aircraft design.</p>
+                <p data-aos="fade-left" data-aos-duration="1400">My research and interests span across sustainable aviation technologies, CFD analysis, propulsion system design, and flight operations. I am committed to contributing to the aviation industry's goal of achieving net-zero emissions by 2050.</p>
 
+                <!-- Core Technical Skills -->
+                <div class="skills" data-aos="fade-up" data-aos-duration="1200">
+                    <h3 class="sub-title">Core Technical Skills</h3>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('software')" data-aos="fade-up" data-aos-delay="100">Software & Tools</p>
+                        <p class="tab-links" onclick="opentab('aerospace')" data-aos="fade-up" data-aos-delay="200">Aerospace</p>
+                        <p class="tab-links" onclick="opentab('professional')" data-aos="fade-up" data-aos-delay="300">Professional</p>
+                    </div>
 
-            <div class="tab-titles">
-                <p data-aos="fade-left" data-aos-duration="1400" class="tab-links active-link" onclick="opentab('interests')">Interests</p>
-                <p data-aos="fade-left" data-aos-duration="1400" class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
-            </div>
-            <div data-aos="fade-left" data-aos-duration="1400" class="tab-contents active-tab" id="interests">
-                <ul>
-                    <li><span>F1 Enthusiast</span><br>As an avid Formula 1 fan, the high-performance engineering 
-                        the cutting edge technology used in F1, has deepened my appreciation for engineering and technology.</li>
-                    <li><span>Engineering Clubs</span><br>As an active member of my University's Engineering Club, I 
-                        regularly collaborate on projects that challenge my technical skills and push the boundaries of whats
-                    possible in Aerospace Engineering and Technology.</li>
-                    <li><span>Mentorship and Childcare</span><br>I find fulfillment in mentoring and looking after young
-                        children whenever I have the opportunity. This allows me to hone my leadership and communication
-                    skills, which are essential in both Engineering and Aviation.</li>
-                </ul>
-            </div>
-            <div data-aos="fade-left" data-aos-duration="1400" class="tab-contents" id="hobbies">
-                <ul>
-                    <li><span>Outdoor Adventures & Activities</span><br>In my free time, I enjoy outdoor activities like top golf 
-                        and go karting and adventures like camping, which combines my love for competition with my interest in 
-                        precision and control- qualities that are so vital in Piloting and Engineering.</li>
-                    <li><span>Reading</span><br>I have a strong passion for personal development and EQ. Currently am exploring
-                    literature on self-growth. Books that focus on leadership, mindset and continous learning inspire me to
-                constantly  improve both personally, socially and professionally.</li>
-                </ul>
-            </div>
-    </div>
-</div>
-    </div>
-</div>
+                    <div class="tab-contents active-tab" id="software">
+                        <ul>
+                            <li><span>MATLAB</span><br>Advanced programming & simulation</li>
+                            <li><span>CATIA V5</span><br>3D modeling & design</li>
+                            <li><span>ANSYS Fluent</span><br>CFD analysis</li>
+                            <li><span>X-Plane</span><br>Flight simulation</li>
+                        </ul>
+                    </div>
 
+                    <div class="tab-contents" id="aerospace">
+                        <ul>
+                            <li><span>CFD Analysis</span><br>Fluid flow simulations</li>
+                            <li><span>Propulsion Design</span><br>Engine performance optimization</li>
+                            <li><span>Performance Modelling</span><br>Aircraft analysis</li>
+                            <li><span>Flight Testing</span><br>Experimental analysis</li>
+                        </ul>
+                    </div>
 
-<!----------Portfolio----------->
-<div id="portfolio">
-    <div class="container">
-        <h1 data-aos="fade-right" data-aos-duration="1400" class="sub-title">Portfolio</h1>
-        <div class="portfolio-list">
-            <div>
-                <i data-aos="fade-left" data-aos-duration="1400" class="fa-solid fa-atom" style="color:cornflowerblue;"></i>
-                <h2 data-aos="fade-left" data-aos-duration="1400">Professional Journey</h2>
-                <p data-aos="fade-left" data-aos-duration="1400">An overview of my professional experience and employment history</p>
-                <a data-aos="fade-left" data-aos-duration="1400" href="employment-history.html">Learn More</a>
-            </div>
-            <div>
-                <i data-aos="fade-left" data-aos-duration="1400" class="fa-solid fa-dna" style="color:cornflowerblue;"></i>
-                <h2 data-aos="fade-left" data-aos-duration="1400">Academic Background</h2>
-                <p data-aos="fade-left" data-aos-duration="1400">My educational journey in aerospace engineering</p>
-                <a data-aos="fade-left" data-aos-duration="1400" href="education-history.html">Learn More</a>
-            </div>
-            <div>
-                <i data-aos="fade-left" data-aos-duration="1400" class="fa-solid fa-clipboard-check" style="color:cornflowerblue;"></i>
-                <h2 data-aos="fade-left" data-aos-duration="1400">Academic Projects</h2>
-                <p data-aos="fade-left" data-aos-duration="1400">View my university projects including BMFA Payload Challenge</p>
-                <a data-aos="fade-left" data-aos-duration="1400" href="academic-projects.html">Learn More</a>
+                    <div class="tab-contents" id="professional">
+                        <ul>
+                            <li><span>Systems Engineering</span><br>Holistic approach</li>
+                            <li><span>Project Management</span><br>Team leadership</li>
+                            <li><span>Technical Communication</span><br>Complex concepts</li>
+                            <li><span>Problem-Solving</span><br>Analytical thinking</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<!-- Portfolio Section -->
+<div id="portfolio">
+    <div class="container">
+        <h1 data-aos="fade-right" data-aos-duration="1400" class="sub-title">Portfolio</h1>
+        <div class="portfolio-list">
+            <div>
+                <i data-aos="fade-left" data-aos-duration="1400" class="fa-solid fa-rocket" style="color:cornflowerblue;"></i>
+                <h2 data-aos="fade-left" data-aos-duration="1400">Academic Projects</h2>
+                <p data-aos="fade-left" data-aos-duration="1400">Explore my engineering projects including the BMFA Payload Challenge</p>
+                <a data-aos="fade-left" data-aos-duration="1400" href="academic-projects.html">View Projects</a>
+            </div>
+            <div>
+                <i data-aos="fade-left" data-aos-duration="1400" class="fa-solid fa-graduation-cap" style="color:cornflowerblue;"></i>
+                <h2 data-aos="fade-left" data-aos-duration="1400">Academic Background</h2>
+                <p data-aos="fade-left" data-aos-duration="1400">My educational journey in Aerospace Engineering</p>
+                <a data-aos="fade-left" data-aos-duration="1400" href="education-history.html">Learn More</a>
+            </div>
+            <div>
+                <i data-aos="fade-left" data-aos-duration="1400" class="fa-solid fa-briefcase" style="color:cornflowerblue;"></i>
+                <h2 data-aos="fade-left" data-aos-duration="1400">Professional Journey</h2>
+                <p data-aos="fade-left" data-aos-duration="1400">My professional experience and career development</p>
+                <a data-aos="fade-left" data-aos-duration="1400" href="employment-history.html">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!---------Contact------------>
+<!-- Contact Section -->
 <div id="contact">
     <div class="container">
         <div class="row">
             <div class="contact-left">
                 <h1 data-aos="fade-right" data-aos-duration="1400" class="sub-title">Contact Me</h1>
-                <p data-aos="fade-right" data-aos-duration="1400"><i class="fa-regular fa-paper-plane"></i>virtuekomo18@gmail.com</p>
-                <p data-aos="fade-right" data-aos-duration="1400"><i class="fa-solid fa-phone"></i>07405260530</p>
+                <p data-aos="fade-right" data-aos-duration="1400"><i class="fa-regular fa-paper-plane"></i> virtuekomo18@gmail.com</p>
+                <p data-aos="fade-right" data-aos-duration="1400"><i class="fa-solid fa-map-marker-alt"></i> London, United Kingdom</p>
                 <div class="social-icons">
                     <a href="https://linkedin.com/in/ochieng-virtue" target="_blank"><i data-aos="fade-right" data-aos-duration="1400" class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://wa.me/07405260530" target="_blank"><i data-aos="fade-right" data-aos-duration="1400" class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
             <div data-aos="fade-left" data-aos-duration="1400" class="contact-right">
                 <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn">Submit</button>
+                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
                 </form>
                 <span id="msg"></span>
             </div>
         </div>
     </div>
     <div class="copyright">
-        <p data-aos="fade-right" data-aos-duration="1400">Copyright © 2025 Abel Virtue Ochieng. All rights reserved </p>
+        <p data-aos="fade-right" data-aos-duration="1400">Copyright © 2025 Abel Virtue Ochieng. All rights reserved.</p>
     </div>
 </div>
 
-
 <script>
+// Tab switching
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
-function opentab(tabname){
-    for(tablink of tablinks){
+function opentab(tabname) {
+    for(tablink of tablinks) {
         tablink.classList.remove("active-link");
     }
-    for(tabcontent of tabcontents){
+    for(tabcontent of tabcontents) {
         tabcontent.classList.remove("active-tab");
     }
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
 }
+
+// Mobile menu
+var sidemenu = document.getElementById("sidemenu");
+function openmenu() {
+    sidemenu.style.right = "0";
+}
+function closemenu() {
+    sidemenu.style.right = "-200px";
+}
+
+// Google Form submission
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw9CebFYU1nFxvMpbB5hblQkj44pnGYdN1Ofoi1WSR7z6y0KlqvCQS-JzC-ipv4TuG7g/exec';
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById('msg');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(function() { msg.innerHTML = ""; }, 5000);
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message));
+});
 </script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-  AOS.init({
-    offset:1,
-  });
-</script>
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbw9CebFYU1nFxvMpbB5hblQkj44pnG_YdN1Ofoi1WSR7z6y0KlqvCQS-JzC-ipv4TuG7g/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML =  "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            }, 5000)
-            form.reset() 
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-</script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const sidemenu = document.getElementById("sidemenu");
-        const openButton = document.querySelector(".fas.fa-bars");
-        const closeButton = document.querySelector(".fas.fa-times");
-        let menuOpen = false;
-    
-        openButton.addEventListener("click", () => {
-            sidemenu.style.right = "0";
-            menuOpen = true;
-            document.body.classList.add("no-scroll");
-        });
-    
-        closeButton.addEventListener("click", () => {
-            sidemenu.style.right = "-135px";
-            menuOpen = false;
-            document.body.classList.remove("no-scroll");
-        });
-    
-        document.addEventListener("click", (e) => {
-            if (menuOpen && !sidemenu.contains(e.target) && e.target !== openButton) {
-                sidemenu.style.right = "-135px";
-                menuOpen = false;
-                document.body.classList.remove("no-scroll");
-            }
-        });
-    
-        window.addEventListener("scroll", () => {
-            if (menuOpen) {
-                sidemenu.style.right = "-135px";
-                menuOpen = false;
-                document.body.classList.remove("no-scroll");
-            }
-        });
+    AOS.init({
+        offset: 100,
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true
     });
 </script>
 
