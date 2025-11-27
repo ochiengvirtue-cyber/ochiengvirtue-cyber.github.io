@@ -2,60 +2,118 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abel Virtue Ochieng | Aerospace Engineer & Pilot</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/ac51eb13ee.js" crossorigin="anonymous"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">Abel<span>Ochieng</span></a>
-            <ul id="sidemenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="education-history.html">Education</a></li>
-                <li><a href="employment-history.html">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fas fa-times" onclick="closemenu()"></i>
-            </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
-        </div>
-    </nav>
-
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Abel Virtue Ochieng</h1>
-            <h2>BEng Aerospace Engineering with Pilot Studies</h2>
-            <p>Aspiring aerospace engineer passionate about sustainable aviation, hybrid-hydrogen propulsion systems, and flight testing.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn primary-btn">View Projects</a>
-                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo" data-aos="fade-down">Abel<span>Ochieng</span></div>
+                <ul id="sidemenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="education-history.html">Education</a></li>
+                    <li><a href="employment-history.html">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times"></i>
+                </ul>
+                <i class="fas fa-bars"></i>
+            </nav>
+            
+            <div class="hero-content">
+                <p data-aos="fade-right" data-aos-duration="1000">Aerospace Engineer & Pilot</p>
+                <h1 data-aos="zoom-in" data-aos-duration="1200">Abel Virtue Ochieng</h1>
+                <h2 data-aos="fade-up" data-aos-duration="1400">BEng Aerospace Engineering with Pilot Studies</h2>
+                <p data-aos="fade-up" data-aos-duration="1600">Aspiring aerospace engineer passionate about sustainable aviation, hybrid-hydrogen propulsion systems, and flight testing.</p>
+                
+                <div class="hero-buttons" data-aos="fade-up" data-aos-duration="1800">
+                    <a href="#projects" class="btn primary-btn">View Projects</a>
+                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            
+            <div class="row">
+                <div class="about-col-1" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="images/IMG_2976.jpeg" alt="Abel Virtue Ochieng">
+                </div>
+                
+                <div class="about-col-2" data-aos="fade-left" data-aos-duration="1000">
                     <p>I am a final-year Aerospace Engineering student at the University of Hertfordshire with a specialisation in Pilot Studies. My academic journey has equipped me with comprehensive knowledge in aerodynamics, propulsion systems, flight testing, and aircraft design.</p>
-                    <p>My research focuses on sustainable aviation technologies, particularly hybrid-hydrogen propulsion systems for regional aircraft. I am committed to contributing to the aviation industry's goal of achieving net-zero emissions by 2050.</p>
-                    <div class="skills">
-                        <h3>Core Competencies</h3>
-                        <ul>
-                            <li>Aerodynamics & Fluid Mechanics</li>
-                            <li>Propulsion System Design</li>
-                            <li>Flight Testing & Analysis</li>
-                            <li>Aircraft Performance Calculations</li>
-                            <li>Systems Reliability Analysis</li>
-                            <li>CAD & Simulation Software</li>
-                        </ul>
-                    </div>
+                    
+                    <p>My research and interests span across sustainable aviation technologies, CFD analysis, propulsion system design, and flight operations. I am committed to contributing to the aviation industry's goal of achieving net-zero emissions by 2050.</p>
+                </div>
+            </div>
+            
+            <!-- Core Technical Skills -->
+            <div class="skills" data-aos="fade-up" data-aos-duration="1200">
+                <h3 class="sub-title">Core Technical Skills & Competencies</h3>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('software')" data-aos="fade-up" data-aos-delay="100">Software & CAD</p>
+                    <p class="tab-links" onclick="opentab('aerospace')" data-aos="fade-up" data-aos-delay="200">Aerospace</p>
+                    <p class="tab-links" onclick="opentab('engineering')" data-aos="fade-up" data-aos-delay="300">Engineering</p>
+                    <p class="tab-links" onclick="opentab('professional')" data-aos="fade-up" data-aos-delay="400">Professional</p>
+                </div>
+                
+                <div class="tab-contents active-tab" id="software">
+                    <ul>
+                        <li><span>MATLAB</span><br>Advanced programming & simulation</li>
+                        <li><span>CATIA V5 & SolidWorks</span><br>3D modeling & design</li>
+                        <li><span>ANSYS Fluent (CFD)</span><br>Computational fluid dynamics</li>
+                        <li><span>Simulink & XFLR5</span><br>System modeling & aerofoil analysis</li>
+                        <li><span>X-Plane Simulator</span><br>Flight simulation & testing</li>
+                        <li><span>Microsoft Excel (VBA)</span><br>Data analysis & automation</li>
+                        <li><span>AutoCAD</span><br>Technical drawings</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="aerospace">
+                    <ul>
+                        <li><span>CFD Analysis</span><br>Fluid flow simulations</li>
+                        <li><span>Propulsion System Design</span><br>Engine performance optimization</li>
+                        <li><span>Performance Modelling</span><br>Aircraft performance analysis</li>
+                        <li><span>Structural Analysis & FEA</span><br>Finite element analysis</li>
+                        <li><span>Systems Integration</span><br>Complex system design</li>
+                        <li><span>Verification & Validation</span><br>V&V processes</li>
+                        <li><span>Wind Tunnel & Flight Testing</span><br>Experimental analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="engineering">
+                    <ul>
+                        <li><span>Design Optimisation</span><br>Performance enhancement</li>
+                        <li><span>Trade-off Analysis</span><br>Design decision making</li>
+                        <li><span>Root Cause Analysis</span><br>Problem identification</li>
+                        <li><span>Process Improvement</span><br>Efficiency optimization</li>
+                        <li><span>Statistical Process Control</span><br>Quality management</li>
+                        <li><span>Mission Profile Development</span><br>Flight planning</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="professional">
+                    <ul>
+                        <li><span>Systems Engineering</span><br>Holistic system approach</li>
+                        <li><span>Technical Project Management</span><br>Team leadership & delivery</li>
+                        <li><span>Regulatory Compliance</span><br>FAA, ICAO, CAA standards</li>
+                        <li><span>Technical Communication</span><br>Complex concept explanation</li>
+                        <li><span>Problem-Solving</span><br>Analytical thinking</li>
+                        <li><span>Requirements Management</span><br>Specification control</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -64,104 +122,74 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Academic Projects</h2>
+            <h2 class="section-title" data-aos="fade-up">Academic Projects</h2>
+            
             <div class="projects-grid">
-                
-                <!-- Project 1: Hybrid-Hydrogen Aircraft -->
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-plane"></i>
-                    </div>
+                <!-- Project cards with animations -->
+                <div class="project-card" data-aos="fade-up" data-aos-duration="800">
+                    <div class="project-icon"><i class="fas fa-plane"></i></div>
                     <h3>Hybrid-Hydrogen Powered Regional Aircraft</h3>
                     <p class="project-module">Module: Aerospace Vehicle Design | March 2025</p>
-                    <p class="project-desc">Optimisation of a 50-seat hybrid-hydrogen powered regional aircraft designed for 1000 nautical miles range. The project integrates hydrogen fuel cell technology (1 MW PEM fuel cells) with solid-state battery systems (900 Wh/kg) and MagniX Magni650 electric motors for sustainable aviation.</p>
+                    <p class="project-desc">Optimisation of a 50-seat hybrid-hydrogen powered regional aircraft designed for 1000 nautical miles range.</p>
                     <ul class="project-highlights">
                         <li>Twin-motor electric configuration with 6-blade carbon composite propellers</li>
-                        <li>Complete performance analysis: take-off, climb, cruise, and landing phases</li>
-                        <li>Failure scenario analysis with redundancy design for safety compliance</li>
+                        <li>Complete performance analysis: take-off, climb, cruise, landing phases</li>
                         <li>Zero CO2 emissions aligned with ICAO 2050 net-zero goals</li>
                     </ul>
-                    <a href="reports/G3.Performance-Propulsion.Ochieng.20011451.pdf" class="btn download-btn" download>
-                        <i class="fas fa-download"></i> Download Full Report (PDF)
-                    </a>
+                    <a href="/reports/G3.Performance-Propulsion.Ochieng.20011451.pdf" class="btn download-btn" download><i class="fas fa-download"></i> Download Full Report (PDF)</a>
                 </div>
-
-                <!-- Project 2: Flight Testing -->
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="project-icon"><i class="fas fa-chart-line"></i></div>
                     <h3>Cessna 172 Skyhawk Flight Testing</h3>
                     <p class="project-module">Module: Flight Testing (6ENT1166-0901)</p>
-                    <p class="project-desc">Comprehensive investigation of stall and take-off performance characteristics of the Cessna 172 Skyhawk using X-Plane 11 simulation. The study analysed stall speeds at different aircraft masses and take-off distances under varying flap configurations.</p>
+                    <p class="project-desc">Comprehensive investigation of stall and take-off performance using X-Plane 11 simulation.</p>
                     <ul class="project-highlights">
-                        <li>Stall speed analysis at three weight configurations (1157kg, 1100kg, 1040kg)</li>
+                        <li>Stall speed analysis at three weight configurations</li>
                         <li>Take-off performance vs flap settings (0, 10, 20 degrees)</li>
-                        <li>Optimal 10-degree flap setting identified for shortest take-off distance</li>
-                        <li>Compliance with FAA and ICAO flight testing regulations</li>
+                        <li>Compliance with FAA and ICAO regulations</li>
                     </ul>
-                    <a href="reports/Flight-Testing-Report.pdf" class="btn download-btn" download>
-                        <i class="fas fa-download"></i> Download Full Report (PDF)
-                    </a>
+                    <a href="/reports/Flight-Testing-Report.pdf" class="btn download-btn" download><i class="fas fa-download"></i> Download Full Report (PDF)</a>
                 </div>
-
-                <!-- Project 3: Aerofoil Analysis -->
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-wind"></i>
-                    </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="project-icon"><i class="fas fa-wind"></i></div>
                     <h3>Low-Cambered Aerofoil Wind Tunnel Analysis</h3>
                     <p class="project-module">Module: Fluids and Aerodynamics (5ENT1128-0901)</p>
-                    <p class="project-desc">Experimental wind tunnel analysis of an unknown low-cambered aerofoil using the AF1300 Subsonic Wind Tunnel. Derived coefficient of lift (CL) from coefficient of pressure (Cp) measurements at various angles of attack and Reynolds numbers.</p>
+                    <p class="project-desc">Experimental wind tunnel analysis using AF1300 Subsonic Wind Tunnel.</p>
                     <ul class="project-highlights">
-                        <li>Wind tunnel testing at Reynolds numbers: 129,462 to 241,519</li>
-                        <li>Pressure tapping measurements across 20 points on aerofoil surfaces</li>
-                        <li>XFLR5 computational validation of experimental results</li>
-                        <li>RMSD analysis confirming data accuracy (0.2 deviation)</li>
+                        <li>Pressure tapping measurements across 20 points</li>
+                        <li>XFLR5 computational validation</li>
+                        <li>RMSD analysis confirming accuracy</li>
                     </ul>
-                    <a href="reports/AEROFOIL-ANALYSIS-DRAFT-WORK.pdf" class="btn download-btn" download>
-                        <i class="fas fa-download"></i> Download Full Report (PDF)
-                    </a>
+                    <a href="/reports/AEROFOIL-ANALYSIS-DRAFT-WORK.pdf" class="btn download-btn" download><i class="fas fa-download"></i> Download Full Report (PDF)</a>
                 </div>
-
-                <!-- Project 4: VOLTURA V1150 Aircraft Design -->
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-drafting-compass"></i>
-                    </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="project-icon"><i class="fas fa-drafting-compass"></i></div>
                     <h3>VOLTURA V1150 Aircraft Design</h3>
                     <p class="project-module">Module: Aerospace Vehicle Design | Group Project</p>
-                    <p class="project-desc">Collaborative aircraft design project for the VOLTURA V1150, a sustainable regional aircraft. Contributed to the technical drawing specifications and design parameters including wingspan, fuselage dimensions, and weight calculations.</p>
+                    <p class="project-desc">Collaborative sustainable regional aircraft design project.</p>
                     <ul class="project-highlights">
-                        <li>Wingspan: 33.50m | Length: 26.00m | Height: 9.14m</li>
-                        <li>Maximum weight: 17,000 kg</li>
-                        <li>Professional CAD drawings to aerospace industry standards</li>
-                        <li>Team collaboration on sustainable aircraft configuration</li>
+                        <li>Wingspan: 33.50m | Length: 26.00m</li>
+                        <li>Professional CAD drawings to aerospace standards</li>
+                        <li>Team collaboration on sustainable configuration</li>
                     </ul>
-                    <a href="reports/GROUP-DRAWING-1-2025-05-06-02_21_01.pdf" class="btn download-btn" download>
-                        <i class="fas fa-download"></i> Download Technical Drawing (PDF)
-                    </a>
+                    <a href="/reports/GROUP-DRAWING-1-2025-05-06-02_21_01.pdf" class="btn download-btn" download><i class="fas fa-download"></i> Download Technical Drawing (PDF)</a>
                 </div>
-
-                <!-- Project 5: Systems Reliability -->
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="project-icon"><i class="fas fa-cogs"></i></div>
                     <h3>Aircraft Cannon Targeting System Reliability Analysis</h3>
                     <p class="project-module">Module: Integrated Systems Reliability (6ENT2057-0105)</p>
-                    <p class="project-desc">Comprehensive reliability analysis of an Aircraft Cannon Targeting System (ACTS) comprising 11 subsystems. Evaluated three system configurations including series arrangement, full active redundancy, and standby redundancy for servo controllers.</p>
+                    <p class="project-desc">Comprehensive reliability analysis of ACTS comprising 11 subsystems.</p>
                     <ul class="project-highlights">
                         <li>Reliability calculations at 10 and 400 flying hours</li>
-                        <li>Fault Tree Analysis (FTA) for failure mode identification</li>
-                        <li>MTBF improvement analysis (80% enhancement evaluation)</li>
-                        <li>Redundancy vs mature product trade-off analysis</li>
+                        <li>Fault Tree Analysis (FTA)</li>
+                        <li>MTBF improvement analysis (80% enhancement)</li>
                     </ul>
-                    <a href="reports/Intergrated-Systems-Realiability-CourseWord-Assignment-Report-1.pdf" class="btn download-btn" download>
-                        <i class="fas fa-download"></i> Download Full Report (PDF)
-                    </a>
+                    <a href="/reports/Intergrated-Systems-Realiability-CourseWord-Assignment-Report-1.pdf" class="btn download-btn" download><i class="fas fa-download"></i> Download Full Report (PDF)</a>
                 </div>
-
             </div>
         </div>
     </section>
@@ -169,81 +197,136 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info" data-aos="fade-right" data-aos-duration="1000">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email</h4>
-                            <p>abelvochieng@outlook.com</p>
+                            <p><a href="mailto:virtuekomo18@gmail.com">virtuekomo18@gmail.com</a></p>
                         </div>
                     </div>
+                    
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <h4>Location</h4>
-                            <p>Hertfordshire, United Kingdom</p>
+                            <p>London, United Kingdom</p>
                         </div>
                     </div>
+                    
                     <div class="contact-item">
                         <i class="fab fa-linkedin"></i>
                         <div>
                             <h4>LinkedIn</h4>
-                            <p>Connect with me professionally</p>
+                            <p><a href="https://linkedin.com/in/ochieng-virtue" target="_blank">Connect with me professionally</a></p>
                         </div>
                     </div>
                 </div>
-                <div class="quick-links">
-                    <h3>Quick Links</h3>
+                
+                <div class="quick-links" data-aos="fade-left" data-aos-duration="1000">
+                    <h3>Contact Form</h3>
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn primary-btn">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                    
+                    <h3 style="margin-top: 30px;">Quick Links</h3>
                     <ul>
-                        <li><a href="education-history.html"><i class="fas fa-graduation-cap"></i> Education History</a></li>
-                        <li><a href="employment-history.html"><i class="fas fa-briefcase"></i> Employment History</a></li>
+                        <li><a href="/education-history.html"><i class="fas fa-graduation-cap"></i> Education History</a></li>
+                        <li><a href="/employment-history.html"><i class="fas fa-briefcase"></i> Employment History</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Abel Virtue Ochieng. All Rights Reserved.</p>
-            <p>BEng Aerospace Engineering with Pilot Studies | University of Hertfordshire</p>
+            <p data-aos="fade-up">&copy; 2025 Abel Virtue Ochieng. All Rights Reserved.</p>
         </div>
     </footer>
-
+    
+    <!-- Scripts -->
     <script>
-        // Mobile menu functions
-        var sidemenu = document.getElementById("sidemenu");
-        function openmenu() {
-            sidemenu.style.right = "0";
+        // Tab switching function
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
         }
-        function closemenu() {
-            sidemenu.style.right = "-200px";
-        }
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+    </script>
+    
+    <script>
+        // Google Form submission
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw9CebFYU1nFxvMpbB5hblQkj44pnGYdN1Ofoi1WSR7z6y0KlqvCQS-JzC-ipv4TuG7g/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById('msg');
+        
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully!";
+                    setTimeout(function() { msg.innerHTML = ""; }, 5000);
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+    
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidemenu = document.getElementById('sidemenu');
+            const openButton = document.querySelector('.fas.fa-bars');
+            const closeButton = document.querySelector('.fas.fa-times');
+            let menuOpen = false;
+            
+            openButton.addEventListener('click', () => {
+                sidemenu.style.right = '0';
+                menuOpen = true;
+                document.body.classList.add('no-scroll');
+            });
+            
+            closeButton.addEventListener('click', () => {
+                sidemenu.style.right = '-135px';
+                menuOpen = false;
+                document.body.classList.remove('no-scroll');
+            });
+            
+            document.addEventListener('click', (e) => {
+                if (menuOpen && !sidemenu.contains(e.target) && e.target !== openButton) {
+                    sidemenu.style.right = '-135px';
+                    menuOpen = false;
+                    document.body.classList.remove('no-scroll');
                 }
             });
         });
-
-        // Navbar background change on scroll
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
+    </script>
+    
+    <!-- AOS Animation Init -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 100,
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true
         });
     </script>
 </body>
