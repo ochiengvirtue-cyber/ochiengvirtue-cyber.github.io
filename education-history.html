@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education History | Abel Virtue Ochieng</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Abel<span>Ochieng</span></a>
+            <ul id="sidemenu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="education-history.html" class="active">Education</a></li>
+                <li><a href="employment-history.html">Experience</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1><i class="fas fa-graduation-cap"></i> Education History</h1>
+        <p>My academic journey and qualifications</p>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline">
+        <div class="timeline-container">
+            
+            <!-- University of Hertfordshire -->
+            <div class="timeline-item">
+                <p class="timeline-date">September 2021 - July 2025</p>
+                <h3>BEng Aerospace Engineering with Pilot Studies</h3>
+                <h4>University of Hertfordshire, Hatfield, UK</h4>
+                <p>Final year student pursuing a comprehensive degree programme combining aerospace engineering principles with practical pilot training. The course covers:</p>
+                <ul>
+                    <li>Aerodynamics and Fluid Mechanics</li>
+                    <li>Aircraft Structures and Materials</li>
+                    <li>Propulsion Systems Design</li>
+                    <li>Flight Testing and Performance Analysis</li>
+                    <li>Avionics and Aircraft Systems</li>
+                    <li>Aerospace Vehicle Design</li>
+                    <li>Systems Reliability and Safety</li>
+                    <li>Flight Simulation and Pilot Training</li>
+                </ul>
+            </div>
+
+            <!-- Hertfordshire International College -->
+            <div class="timeline-item">
+                <p class="timeline-date">September 2020 - June 2021</p>
+                <h3>International Foundation Programme in Engineering</h3>
+                <h4>Hertfordshire International College (HIC), Hatfield, UK</h4>
+                <p>Successfully completed the foundation programme preparing for undergraduate engineering studies. Key modules included:</p>
+                <ul>
+                    <li>Mathematics for Engineering</li>
+                    <li>Physics and Mechanics</li>
+                    <li>Academic English and Communication Skills</li>
+                    <li>Introduction to Engineering Principles</li>
+                    <li>Computing and Programming Fundamentals</li>
+                </ul>
+            </div>
+
+            <!-- Additional Education -->
+            <div class="timeline-item">
+                <p class="timeline-date">Prior Education</p>
+                <h3>Secondary Education</h3>
+                <h4>Kenya</h4>
+                <p>Completed secondary education with strong foundations in Mathematics, Physics, and Sciences, providing the academic background for pursuing engineering studies in the United Kingdom.</p>
+            </div>
+
+        </div>
+
+        <div class="container" style="text-align: center;">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Abel Virtue Ochieng. All Rights Reserved.</p>
+            <p>BEng Aerospace Engineering with Pilot Studies | University of Hertfordshire</p>
+        </div>
+    </footer>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
