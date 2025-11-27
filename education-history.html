@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education History | Abel Virtue Ochieng</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/ac51eb13ee.js" crossorigin="anonymous"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">Abel<span>Ochieng</span></a>
+            <div class="logo" data-aos="fade-down">Abel<span>Ochieng</span></div>
             <ul id="sidemenu">
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="index.html#about">About</a></li>
@@ -18,88 +21,127 @@
                 <li><a href="education-history.html" class="active">Education</a></li>
                 <li><a href="employment-history.html">Experience</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
-                <i class="fas fa-times" onclick="closemenu()"></i>
+                <i class="fas fa-times"></i>
             </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
+            <i class="fas fa-bars"></i>
         </div>
     </nav>
 
     <!-- Page Header -->
     <section class="page-header">
-        <h1><i class="fas fa-graduation-cap"></i> Education History</h1>
-        <p>My academic journey and qualifications</p>
+        <div class="container">
+            <h1 data-aos="fade-up">Education History</h1>
+            <p data-aos="fade-up" data-aos-delay="200">My academic journey in aerospace engineering and aviation</p>
+        </div>
     </section>
 
     <!-- Timeline Section -->
     <section class="timeline">
         <div class="timeline-container">
-            
-            <!-- University of Hertfordshire -->
-            <div class="timeline-item">
-                <p class="timeline-date">September 2021 - July 2025</p>
-                <h3>BEng Aerospace Engineering with Pilot Studies</h3>
-                <h4>University of Hertfordshire, Hatfield, UK</h4>
-                <p>Final year student pursuing a comprehensive degree programme combining aerospace engineering principles with practical pilot training. The course covers:</p>
+            <!-- University of Hertfordshire - BEng -->
+            <div class="timeline-item" data-aos="fade-right" data-aos-duration="800">
+                <div class="timeline-date">September 2021 - June 2025</div>
+                <h3>BEng (Hons) Aerospace Engineering with Pilot Studies</h3>
+                <h4>University of Hertfordshire | Hatfield, United Kingdom</h4>
+                <p>A comprehensive aerospace engineering program integrating theoretical knowledge with practical pilot training. Specialized in propulsion systems, aerodynamics, flight testing, and sustainable aviation technologies.</p>
                 <ul>
-                    <li>Aerodynamics and Fluid Mechanics</li>
-                    <li>Aircraft Structures and Materials</li>
-                    <li>Propulsion Systems Design</li>
-                    <li>Flight Testing and Performance Analysis</li>
-                    <li>Avionics and Aircraft Systems</li>
-                    <li>Aerospace Vehicle Design</li>
-                    <li>Systems Reliability and Safety</li>
-                    <li>Flight Simulation and Pilot Training</li>
+                    <li>Focus on hybrid-hydrogen propulsion systems and sustainable aviation</li>
+                    <li>Advanced CFD analysis and performance modeling</li>
+                    <li>Structural analysis using FEA techniques</li>
+                    <li>Flight testing and X-Plane simulation</li>
+                    <li>Wind tunnel testing and aerofoil analysis</li>
+                    <li>Systems reliability and integration engineering</li>
                 </ul>
             </div>
 
-            <!-- Hertfordshire International College -->
-            <div class="timeline-item">
-                <p class="timeline-date">September 2020 - June 2021</p>
-                <h3>International Foundation Programme in Engineering</h3>
-                <h4>Hertfordshire International College (HIC), Hatfield, UK</h4>
-                <p>Successfully completed the foundation programme preparing for undergraduate engineering studies. Key modules included:</p>
+            <!-- University of Hertfordshire - Foundation -->
+            <div class="timeline-item" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+                <div class="timeline-date">September 2020 - June 2021</div>
+                <h3>Foundation Programme in Engineering</h3>
+                <h4>University of Hertfordshire | Hatfield, United Kingdom</h4>
+                <p>Preparatory program providing essential foundation in mathematics, physics, and engineering principles required for aerospace engineering degree.</p>
                 <ul>
-                    <li>Mathematics for Engineering</li>
-                    <li>Physics and Mechanics</li>
-                    <li>Academic English and Communication Skills</li>
-                    <li>Introduction to Engineering Principles</li>
-                    <li>Computing and Programming Fundamentals</li>
+                    <li>Advanced Mathematics and Calculus</li>
+                    <li>Engineering Physics and Mechanics</li>
+                    <li>Technical Drawing and CAD fundamentals</li>
+                    <li>Programming and computational methods</li>
                 </ul>
             </div>
 
-            <!-- Additional Education -->
-            <div class="timeline-item">
-                <p class="timeline-date">Prior Education</p>
-                <h3>Secondary Education</h3>
-                <h4>Kenya</h4>
-                <p>Completed secondary education with strong foundations in Mathematics, Physics, and Sciences, providing the academic background for pursuing engineering studies in the United Kingdom.</p>
+            <!-- Kenya Aeronautical College -->
+            <div class="timeline-item" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
+                <div class="timeline-date">2019 - 2020</div>
+                <h3>Aviation Studies</h3>
+                <h4>Kenya Aeronautical College | Nairobi, Kenya</h4>
+                <p>Foundational training in aviation principles, aircraft systems, and flight operations. This program sparked my passion for aerospace engineering and provided hands-on exposure to aircraft maintenance and operations.</p>
+                <ul>
+                    <li>Aircraft systems and components</li>
+                    <li>Aviation regulations and safety protocols</li>
+                    <li>Basic aerodynamics and flight principles</li>
+                    <li>Aircraft maintenance procedures</li>
+                </ul>
             </div>
 
-        </div>
-
-        <div class="container" style="text-align: center;">
-            <a href="index.html" class="back-link">
-                <i class="fas fa-arrow-left"></i> Back to Portfolio
-            </a>
+            <!-- Anestar Victory Boys Highschool -->
+            <div class="timeline-item" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+                <div class="timeline-date">2015 - 2018</div>
+                <h3>Kenya Certificate of Secondary Education (KCSE)</h3>
+                <h4>Anestar Victory Boys Highschool | Kenya</h4>
+                <p>Completed secondary education with strong performance in Mathematics, Physics, and Chemistry. Developed analytical thinking and problem-solving skills that laid the foundation for engineering studies.</p>
+                <ul>
+                    <li>Advanced Mathematics</li>
+                    <li>Physics and Chemistry</li>
+                    <li>Leadership and teamwork through school activities</li>
+                </ul>
+            </div>
         </div>
     </section>
+
+    <!-- Back Link -->
+    <div class="container" style="text-align: center; padding: 40px 20px;">
+        <a href="index.html" class="back-link" data-aos="fade-up">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+    </div>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Abel Virtue Ochieng. All Rights Reserved.</p>
-            <p>BEng Aerospace Engineering with Pilot Studies | University of Hertfordshire</p>
+            <p data-aos="fade-up">&copy; 2025 Abel Virtue Ochieng. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
-        var sidemenu = document.getElementById("sidemenu");
-        function openmenu() {
-            sidemenu.style.right = "0";
-        }
-        function closemenu() {
-            sidemenu.style.right = "-200px";
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidemenu = document.getElementById('sidemenu');
+            const openButton = document.querySelector('.fas.fa-bars');
+            const closeButton = document.querySelector('.fas.fa-times');
+            let menuOpen = false;
+            
+            openButton.addEventListener('click', () => {
+                sidemenu.style.right = '0';
+                menuOpen = true;
+                document.body.classList.add('no-scroll');
+            });
+            
+            closeButton.addEventListener('click', () => {
+                sidemenu.style.right = '-135px';
+                menuOpen = false;
+                document.body.classList.remove('no-scroll');
+            });
+        });
+    </script>
+    
+    <!-- AOS Animation Init -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 100,
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true
+        });
     </script>
 </body>
 </html>
