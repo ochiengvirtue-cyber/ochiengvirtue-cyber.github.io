@@ -395,6 +395,7 @@ form input, form textarea {
     padding: 40px 0;
 }
 
+/* Central vertical line */
 .timeline-container::after {
     content: '';
     position: absolute;
@@ -402,18 +403,21 @@ form input, form textarea {
     background: var(--accent-color);
     top: 0;
     bottom: 100px;
-    left: 50%; margin-left: -3px;
+    left: 50%;
+    margin-left: -3px;
 }
 
+/* Timeline item cards */
 .timeline-item {
-    padding: 30px;    position: relative;
+    padding: 30px;
+    position: relative;
     background: var(--card-bg);
     border-radius: 6px;
     margin-bottom: 30px;
     border: 1px solid rgba(100, 255, 218, 0.2);
 }
 
-        /* Alternating timeline items - left and right */
+/* Alternating timeline items - left and right on desktop */
 .timeline-item:nth-child(odd) {
     width: 45%;
     margin-left: 0;
@@ -435,36 +439,23 @@ form input, form textarea {
     background: var(--accent-color);
     border-radius: 50%;
     top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
 }
 
+/* Ensure both odd and even dots are centered */
 .timeline-item:nth-child(odd)::before {
-    right: -10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .timeline-item:nth-child(even)::before {
-    
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-        /* Responsive design for mobile and tablet */
-@media (max-width: 1024px) {
-    .timeline-container::after {
-        left: 30px;
-        margin-left: 0;
-    }
-    
-    .timeline-item {
-        width: calc(100% - 80px);
-        margin-left: 80px !important;
-        margin-right: 0 !important;
-    }
-    
-    .timeline-item::before {
-        left: -50px !important;
-        right: auto !important;
-    }
-}
-
+/* Timeline item typography */
 .timeline-item h3 {
     color: var(--accent-color);
     margin-bottom: 10px;
@@ -488,6 +479,48 @@ form input, form textarea {
     color: var(--accent-color);
     font-weight: 600;
     margin-bottom: 10px;
+}
+
+/* Responsive design for tablet and mobile */
+@media (max-width: 1024px) {
+    /* Move line to left side */
+    .timeline-container::after {
+        left: 30px;
+        margin-left: 0;
+    }
+    
+    /* All items full width, indented from left */
+    .timeline-item {
+        width: calc(100% - 80px);
+        margin-left: 80px !important;
+        margin-right: 0 !important;
+    }
+    
+    /* Move dots to left side */
+    .timeline-item::before {
+        left: -50px !important;
+        right: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-container {
+        padding: 20px 0;
+    }
+    
+    .timeline-item {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+        padding: 20px;
+    }
+    
+    .timeline-container::after {
+        left: 20px;
+    }
+    
+    .timeline-item::before {
+        left: -40px !important;
+    }
 }
 
 .page-header {
@@ -562,103 +595,128 @@ form input, form textarea {
     }
     
     .timeline-container::after {
-        left: 31px;
+        left: 20px;
     }
 }
-    </style><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </style><script src="https://kit.fontawesome.com/ac51eb13ee.js" crossorigin="anonymous"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-
-<nav>
-    <div class="nav-container">
-        <a href="index.html" class="logo">Abel<span>Ochieng</span></a>
-        <ul id="sidemenu">
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#projects">Projects</a></li>
-            <li><a href="education-history.html">Education</a></li>
-            <li><a href="employment-history.html" class="active">Experience</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-            <i class="fas fa-times" onclick="closemenu()"></i>
-        </ul>
-        <i class="fas fa-bars" onclick="openmenu()"></i>
-    </div>
-</nav>
-
-<!-- Page Header -->
-<section class="page-header">
-    <h1><i class="fas fa-briefcase"></i> Employment History</h1>
-    <p>Professional experience and career journey</p>
-</section>
-
-<!-- Timeline Section -->
-<section class="timeline">
-    <div class="timeline-container">
-        
-        <!-- Production Lead -->
-        <div class="timeline-item">
-            <p class="timeline-date">Jun 2024 - Aug 2025</p>
-            <h3>Production Lead</h3>
-            <h4>Carne Food UK | London, UK</h4>
-            <ul>
-                <li>Streamlined production workflows, improving operational efficiency by 15% through process redesign</li>
-                <li>Ensuring 100% compliance with safety and quality regulations</li>
-                <li>Introduced a data-driven monitoring system, reducing errors by 20%</li>
-                <li>Applied problem-solving techniques to eliminate bottlenecks, reducing downtime by 10%</li>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="fade-down">Abel<span>Ochieng</span></div>
+            <ul id="sidemenu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="education-history.html">Education</a></li>
+                <li><a href="employment-history.html" class="active">Experience</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <i class="fas fa-times"></i>
             </ul>
+            <i class="fas fa-bars"></i>
         </div>
+    </nav>
 
-        <!-- Team Supervisor -->
-        <div class="timeline-item">
-            <p class="timeline-date">Nov 2021 - Aug 2023</p>
-            <h3>Team Supervisor</h3>
-            <h4>Gopuff | London, UK</h4>
-            <ul>
-                <li>Led a team of 9-14 staff, achieving and exceeding key performance indicators</li>
-                <li>Optimised shift schedules and resource allocation, increasing productivity by 80%</li>
-                <li>Resolved technical and system issues, ensuring operational continuity</li>
-                <li>Managed staff relations, addressing complaints and internal issues proactively</li>
-            </ul>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-aos="fade-up">Employment History</h1>
+            <p data-aos="fade-up" data-aos-delay="200">My professional journey in aerospace and engineering</p>
         </div>
+    </section>
 
-        <!-- Student Proctor -->
-        <div class="timeline-item">
-            <p class="timeline-date">Oct 2021 - May 2023</p>
-            <h3>Student Proctor</h3>
-            <h4>University of Hertfordshire | Hatfield, UK</h4>
-            <ul>
-                <li>Assisted in setting up lectures, exams, and lab sessions</li>
-                <li>Supported students with academic queries, referrals, and technical troubleshooting</li>
-                <li>Managed exam logistics using university systems and technology</li>
-            </ul>
+    <!-- Timeline Section -->
+    <section class="timeline">
+        <div class="timeline-container">
+            <!-- Internship Entry 1 -->
+            <div class="timeline-item" data-aos="fade-right" data-aos-duration="800">
+                <div class="timeline-date">June 2024 - September 2024</div>
+                <h3>Aerospace Engineering Intern</h3>
+                <h4>[Company Name] | [Location]</h4>
+                <p>Description of your internship experience, key projects, and accomplishments.</p>
+                <ul>
+                    <li>Key responsibility or achievement 1</li>
+                    <li>Key responsibility or achievement 2</li>
+                    <li>Key responsibility or achievement 3</li>
+                </ul>
+            </div>
+
+            <!-- Internship Entry 2 -->
+            <div class="timeline-item" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+                <div class="timeline-date">January 2024 - May 2024</div>
+                <h3>Engineering Placement</h3>
+                <h4>[Company Name] | [Location]</h4>
+                <p>Description of your placement experience and technical contributions.</p>
+                <ul>
+                    <li>Achievement or project 1</li>
+                    <li>Achievement or project 2</li>
+                    <li>Achievement or project 3</li>
+                </ul>
+            </div>
+
+            <!-- Work Experience Entry 3 -->
+            <div class="timeline-item" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
+                <div class="timeline-date">2023</div>
+                <h3>Technical Support / Junior Engineer</h3>
+                <h4>[Company Name] | [Location]</h4>
+                <p>Details about your role and responsibilities.</p>
+                <ul>
+                    <li>Responsibility or achievement 1</li>
+                    <li>Responsibility or achievement 2</li>
+                    <li>Responsibility or achievement 3</li>
+                </ul>
+            </div>
         </div>
+    </section>
 
-    </div>
-    
-    <div class="container" style="text-align: center; margin-top: 3rem;">
-        <a href="index.html" class="back-link">
+    <!-- Back Link -->
+    <div class="container" style="text-align: center; padding: 40px 20px;">
+        <a href="index.html" class="back-link" data-aos="fade-up">
             <i class="fas fa-arrow-left"></i> Back to Portfolio
         </a>
     </div>
-</section>
 
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <p>© 2025 Abel Virtue Ochieng. All Rights Reserved.</p>
-        <p>BEng Aerospace Engineering with Pilot Studies | University of Hertfordshire</p>
-    </div>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p data-aos="fade-up">&copy; 2025 Abel Virtue Ochieng. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu() {
-        sidemenu.style.right = "0";
-    }
-    function closemenu() {
-        sidemenu.style.right = "-200px";
-    }
-</script>
-
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidemenu = document.getElementById('sidemenu');
+            const openButton = document.querySelector('.fas.fa-bars');
+            const closeButton = document.querySelector('.fas.fa-times');
+            let menuOpen = false;
+            
+            openButton.addEventListener('click', () => {
+                sidemenu.style.right = '0';
+                menuOpen = true;
+                document.body.classList.add('no-scroll');
+            });
+            
+            closeButton.addEventListener('click', () => {
+                sidemenu.style.right = '-135px';
+                menuOpen = false;
+                document.body.classList.remove('no-scroll');
+            });
+        });
+    </script>
+    
+    <!-- AOS Animation Init -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 100,
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
 </body>
 </html>
