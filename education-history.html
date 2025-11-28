@@ -395,6 +395,7 @@ form input, form textarea {
     padding: 40px 0;
 }
 
+/* Central vertical line */
 .timeline-container::after {
     content: '';
     position: absolute;
@@ -402,19 +403,22 @@ form input, form textarea {
     background: var(--accent-color);
     top: 0;
     bottom: 100px;
-    left: 50%; margin-left: -3px;
+    left: 50%;
+    margin-left: -3px;
 }
 
+/* Timeline item cards */
 .timeline-item {
-    padding: 30px;    position: relative;
+    padding: 30px;
+    position: relative;
     background: var(--card-bg);
     border-radius: 6px;
     margin-bottom: 30px;
     border: 1px solid rgba(100, 255, 218, 0.2);
 }
 
-        /* Alternating timeline items - left and right */
-.t    left: 50%; margin-left: 50%; transform: translateX(-50%);imeline-item:nth-child(odd) {
+/* Alternating timeline items - left and right on desktop */
+.timeline-item:nth-child(odd) {
     width: 45%;
     margin-left: 0;
     margin-right: auto;
@@ -435,37 +439,23 @@ form input, form textarea {
     background: var(--accent-color);
     border-radius: 50%;
     top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
 }
 
+/* Ensure both odd and even dots are centered */
 .timeline-item:nth-child(odd)::before {
-
-        left: 50%; transform: translateX(-50%);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .timeline-item:nth-child(even)::before {
-    left: 50%; transform: translateX(-50%);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-        /* Responsive design for mobile and tablet */
-@media (max-width: 1024px) {
-    .timeline-container::after {
-        left: 30px;
-        margin-left: 0;
-    }
-    
-    .timeline-item {
-        width: calc(100% - 80px);
-        margin-left: 80px !important;
-        margin-right: 0 !important;
-    }
-    
-    .timeline-item::before {
-        left: -50px !important;
-        right: auto !important;
-    }
-}
-
+/* Timeline item typography */
 .timeline-item h3 {
     color: var(--accent-color);
     margin-bottom: 10px;
@@ -489,6 +479,48 @@ form input, form textarea {
     color: var(--accent-color);
     font-weight: 600;
     margin-bottom: 10px;
+}
+
+/* Responsive design for tablet and mobile */
+@media (max-width: 1024px) {
+    /* Move line to left side */
+    .timeline-container::after {
+        left: 30px;
+        margin-left: 0;
+    }
+    
+    /* All items full width, indented from left */
+    .timeline-item {
+        width: calc(100% - 80px);
+        margin-left: 80px !important;
+        margin-right: 0 !important;
+    }
+    
+    /* Move dots to left side */
+    .timeline-item::before {
+        left: -50px !important;
+        right: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-container {
+        padding: 20px 0;
+    }
+    
+    .timeline-item {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+        padding: 20px;
+    }
+    
+    .timeline-container::after {
+        left: 20px;
+    }
+    
+    .timeline-item::before {
+        left: -40px !important;
+    }
 }
 
 .page-header {
@@ -563,7 +595,7 @@ form input, form textarea {
     }
     
     .timeline-container::after {
-        left: 31px;
+        left: 20px;
     }
 }
     </style><script src="https://kit.fontawesome.com/ac51eb13ee.js" crossorigin="anonymous"></script>
