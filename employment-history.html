@@ -446,6 +446,25 @@ form input, form textarea {
     left: -60px;
 }
 
+        /* Responsive design for mobile and tablet */
+@media (max-width: 1024px) {
+    .timeline-container::after {
+        left: 30px;
+        margin-left: 0;
+    }
+    
+    .timeline-item {
+        width: calc(100% - 80px);
+        margin-left: 80px !important;
+        margin-right: 0 !important;
+    }
+    
+    .timeline-item::before {
+        left: -50px !important;
+        right: auto !important;
+    }
+}
+
 .timeline-item h3 {
     color: var(--accent-color);
     margin-bottom: 10px;
