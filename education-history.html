@@ -414,7 +414,7 @@ form input, form textarea {
 }
 
         /* Alternating timeline items - left and right */
-.t    left: 50%; margin-left: -10px;imeline-item:nth-child(odd) {
+.t    left: 50%; margin-left: 50%; transform: translateX(-50%);imeline-item:nth-child(odd) {
     width: 45%;
     margin-left: 0;
     margin-right: auto;
@@ -440,11 +440,11 @@ form input, form textarea {
 
 .timeline-item:nth-child(odd)::before {
 
-        right: -10px;
+        left: 50%; transform: translateX(-50%);
 }
 
 .timeline-item:nth-child(even)::before {
-    left: -10px;
+    left: 50%; transform: translateX(-50%);
 }
 
         /* Responsive design for mobile and tablet */
