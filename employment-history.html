@@ -402,17 +402,48 @@ form input, form textarea {
     background: var(--accent-color);
     top: 0;
     bottom: 100px;
-    left: 30px;
-    margin-left: -3px;
+    left: 50%; margin-left: -3px;
 }
 
 .timeline-item {
-    padding: 20px 40px 20px 70px;
-    position: relative;
+    padding: 30px;    position: relative;
     background: var(--card-bg);
     border-radius: 6px;
     margin-bottom: 30px;
     border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+        /* Alternating timeline items - left and right */
+.timeline-item:nth-child(odd) {
+    width: 45%;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.timeline-item:nth-child(even) {
+    width: 45%;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* Timeline dots in center */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    top: 20px;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::before {
+    right: -60px;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -60px;
 }
 
 .timeline-item h3 {
