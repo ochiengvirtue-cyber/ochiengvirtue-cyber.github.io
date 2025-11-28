@@ -402,7 +402,7 @@ form input, form textarea {
     width: 6px;
     background: var(--accent-color);
     top: 0;
-    bottom: 100px;
+    bottom: 0;
     left: 50%;
     margin-left: -3px;
 }
@@ -415,22 +415,22 @@ form input, form textarea {
     border-radius: 6px;
     margin-bottom: 30px;
     border: 1px solid rgba(100, 255, 218, 0.2);
+    width: 45%;
 }
 
-/* Alternating timeline items - left and right on desktop */
+/* Odd items - left side */
 .timeline-item:nth-child(odd) {
-    width: 45%;
     margin-left: 0;
     margin-right: auto;
 }
 
+/* Even items - right side */
 .timeline-item:nth-child(even) {
-    width: 45%;
     margin-left: auto;
     margin-right: 0;
 }
 
-/* Timeline dots in center */
+/* Timeline dots */
 .timeline-item::before {
     content: '';
     position: absolute;
@@ -438,21 +438,38 @@ form input, form textarea {
     height: 20px;
     background: var(--accent-color);
     border-radius: 50%;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 30px;
     z-index: 1;
 }
 
-/* Ensure both odd and even dots are centered */
+/* Dot position for odd (left) cards - dot goes to the right */
 .timeline-item:nth-child(odd)::before {
-    left: 50%;
-    transform: translateX(-50%);
+    right: -62px;
+    left: auto;
 }
 
+/* Dot position for even (right) cards - dot goes to the left */
 .timeline-item:nth-child(even)::before {
-    left: 50%;
-    transform: translateX(-50%);
+    left: -62px;
+    right: auto;
+}
+
+/* Connector lines from cards to center */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background: var(--accent-color);
+    top: 38px;
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: -40px;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -40px;
 }
 
 /* Timeline item typography */
@@ -497,9 +514,16 @@ form input, form textarea {
     }
     
     /* Move dots to left side */
-    .timeline-item::before {
+    .timeline-item::before,
+    .timeline-item:nth-child(odd)::before,
+    .timeline-item:nth-child(even)::before {
         left: -50px !important;
         right: auto !important;
+    }
+    
+    /* Hide connector lines on mobile */
+    .timeline-item::after {
+        display: none;
     }
 }
 
@@ -518,10 +542,13 @@ form input, form textarea {
         left: 20px;
     }
     
-    .timeline-item::before {
+    .timeline-item::before,
+    .timeline-item:nth-child(odd)::before,
+    .timeline-item:nth-child(even)::before {
         left: -40px !important;
     }
 }
+
 
 .page-header {
     background: var(--bg-dark);
