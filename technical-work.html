@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Technical Work | Ochieng Virtue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="home.css">
+    <style>
+        /* Page-specific enhancements (kept minimal to blend with main.css) */
+        .tech-page-hero {
+            text-align: center;
+            padding: 4rem 1.5rem 2rem;
+        }
+        .tech-page-hero h1 {
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+        }
+        .tech-page-hero p {
+            max-width: 720px;
+            margin: 0.5rem auto 0;
+        }
+
+        .tech-projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 0 1.5rem 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tech-card {
+            background: rgba(10, 12, 28, 0.9);
+            border-radius: 12px;
+            padding: 1.75rem 1.5rem;
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 255, 204, 0.12);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+        .tech-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+            border-color: rgba(0, 255, 204, 0.4);
+        }
+
+        .tech-card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .tech-meta {
+            font-size: 0.9rem;
+            color: #9fd9ff;
+            margin-bottom: 0.75rem;
+        }
+
+        .tech-description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.1rem;
+        }
+
+        .file-list-heading {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #a0a8ff;
+            margin-bottom: 0.4rem;
+        }
+
+        .file-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1rem;
+        }
+        .file-list li {
+            font-size: 0.9rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .file-list a {
+            color: #7cf3d6;
+            text-decoration: none;
+        }
+        .file-list a:hover {
+            text-decoration: underline;
+        }
+
+        .viewer-container {
+            margin-top: 0.5rem;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(124, 243, 214, 0.35);
+            background: #050712;
+        }
+        .viewer-note {
+            font-size: 0.8rem;
+            color: #b8c4ff;
+            margin-top: 0.35rem;
+        }
+        iframe {
+            width: 100%;
+            height: 360px;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .tech-page-hero {
+                padding-top: 3rem;
+            }
+            iframe {
+                height: 260px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">Ochieng Virtue</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="academic-projects.html">Academic Projects</a></li>
+            <li><a href="education-history.html">Education History</a></li>
+            <li><a href="employment-history.html">Employment History</a></li>
+            <li><a href="technical-work.html" class="active">Technical Work</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="tech-page-hero">
+        <h1>Technical Work & Engineering Documentation</h1>
+        <p>
+            A curated selection of technical drawings, engineering reports, and supporting documentation
+            demonstrating capability in aerospace design, analysis, and systems reliability.
+        </p>
+    </section>
+
+    <section class="tech-projects-grid">
+
+        <!-- Model Aircraft Design & Manufacturing -->
+        <article class="tech-card">
+            <h2>Model Aircraft Design &amp; Manufacturing</h2>
+            <p class="tech-meta">Tools: CATIA V5, SolidWorks, AutoCAD</p>
+            <p class="tech-description">
+                Comprehensive design and manufacturing documentation for a scaled model aircraft, including detailed
+                CAD geometry, structural layout, and propulsion system integration. The work covers component-level
+                drawings, assembly definitions, and production-ready technical specifications.
+            </p>
+
+            <p class="file-list-heading">Documentation set</p>
+            <ul class="file-list">
+                <li>13.5 Prop Tech Drawing.1.pdf</li>
+                <li>Propulsion Systems Assembly.pdf</li>
+                <li>APPENDIX-B.pdf</li>
+                <li>APPENDIX-C.pdf</li>
+            </ul>
+
+            <!-- Example: main combined or representative PDF viewer -->
+            <div class="viewer-container">
+                <iframe 
+                    src="https://docs.google.com/gview?url=https://ochiengvirtue-cyber.github.io/technical-work/Propulsion%20Systems%20Assembly.pdf&embedded=true">
+                </iframe>
+            </div>
+            <p class="viewer-note">
+                Use the in-frame controls to zoom and navigate. Additional appendices and drawings are available via the file list above.
+            </p>
+        </article>
+
+        <!-- Flight Testing & Performance Validation -->
+        <article class="tech-card">
+            <h2>Flight Testing &amp; Performance Validation</h2>
+            <p class="tech-meta">Tools: MATLAB, LabVIEW, Excel</p>
+            <p class="tech-description">
+                Experimental flight testing and performance evaluation of the model aircraft, focusing on validation of
+                predicted aerodynamic and propulsion characteristics. The report includes test planning, data
+                acquisition methodology, processed performance data, and comparison against analytical and simulation
+                results.
+            </p>
+
+            <p class="file-list-heading">Documentation</p>
+            <ul class="file-list">
+                <li>Flight Testing Report.docx</li>
+            </ul>
+
+            <div class="viewer-container">
+                <iframe 
+                    src="https://view.officeapps.live.com/op/embed.aspx?src=https://ochiengvirtue-cyber.github.io/technical-work/Flight%20Testing%20Report.docx">
+                </iframe>
+            </div>
+            <p class="viewer-note">
+                Embedded viewer renders the original Word document directly in the browser for detailed inspection.
+            </p>
+        </article>
+
+        <!-- Aerodynamics & Fluid Mechanics -->
+        <article class="tech-card">
+            <h2>Aerodynamics &amp; Fluid Mechanics</h2>
+            <p class="tech-meta">Tools: ANSYS Fluent, XFLR5, MATLAB</p>
+            <p class="tech-description">
+                Aerofoil aerodynamic assessment combining analytical methods and numerical analysis to evaluate lift,
+                drag, and flow behaviour across a range of operating conditions. The work demonstrates understanding of
+                boundary-layer phenomena, pressure distribution, and performance implications for wing design.
+            </p>
+
+            <p class="file-list-heading">Documentation</p>
+            <ul class="file-list">
+                <li>AEROFOIL ANALYSIS DRAFT WORK.docx</li>
+            </ul>
+
+            <div class="viewer-container">
+                <iframe 
+                    src="https://view.officeapps.live.com/op/embed.aspx?src=https://ochiengvirtue-cyber.github.io/technical-work/AEROFOIL%20ANALYSIS%20DRAFT%20WORK.docx">
+                </iframe>
+            </div>
+            <p class="viewer-note">
+                Draft technical report outlining aerofoil analysis methodology, assumptions, and key aerodynamic metrics.
+            </p>
+        </article>
+
+        <!-- Systems Reliability -->
+        <article class="tech-card">
+            <h2>Systems Reliability</h2>
+            <p class="tech-meta">Tools: Reliability Workbench, FMEA techniques, Excel</p>
+            <p class="tech-description">
+                Reliability assessment of integrated aerospace systems, applying formal reliability engineering methods to
+                quantify system performance over time. The work incorporates failure mode and effects analysis,
+                reliability block diagrams, and probability modelling to support design-for-reliability decisions.
+            </p>
+
+            <p class="file-list-heading">Documentation</p>
+            <ul class="file-list">
+                <li>Integrated Systems (Reliability CourseWord Assignment Report) (1).docx</li>
+            </ul>
+
+            <div class="viewer-container">
+                <iframe 
+                    src="https://view.officeapps.live.com/op/embed.aspx?src=https://ochiengvirtue-cyber.github.io/technical-work/Integrated%20Systems%20(Reliability%20CourseWord%20Assignment%20Report)%20(1).docx">
+                </iframe>
+            </div>
+            <p class="viewer-note">
+                Formal coursework report documenting systems reliability modelling approach, assumptions, and key findings.
+            </p>
+        </article>
+
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; <span id="year"></span> Ochieng Virtue. All rights reserved.</p>
+</footer>
+
+<script>
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+</script>
+</body>
+</html>
